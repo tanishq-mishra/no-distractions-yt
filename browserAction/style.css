@@ -1,0 +1,36 @@
+#popup-content .container {
+
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  height: 400px;
+  width: 300px;
+  align-items: flex-start;
+  color: white;
+  background-color: #181818;
+}
+
+.title-container {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.title-container h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.title-container img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.container .form-check {
+  padding-left: 35px;
+  text-align: center;
+  margin-bottom: 12px;
+}
