@@ -1,4 +1,3 @@
-/* Retrieve any previously set cookie and send to content script */
 browser.runtime.onInstalled.addListener((e) => {
     const optionNames = ['block-all', 'block-subscriptions'];
     optionNames.forEach(o => {
@@ -7,12 +6,6 @@ browser.runtime.onInstalled.addListener((e) => {
 
 })
 
-
-
-
-var emptyCookie = {
-
-}
 
 
 function getActiveTab() {
@@ -53,8 +46,6 @@ function localStorageUpdate(e) {
 
 
         }
-        // optionNames.forEach(o => {
-        //            })
     });
 }
 

@@ -1,4 +1,3 @@
-// Put all the javascript code here, that you want to execute after page load.
 (function () {
     let browserContainer = document.querySelector('ytd-browse');
 
