@@ -6,16 +6,42 @@
         browserContainer.style.visibility = "hidden";
     }
 
-    function blockNone() {
+    function unBlockAll() {
         browserContainer.style.visibility = "visible";
     }
 
-    browser.runtime.onMessage.addListener((message) => {
-        if (message.command == "blockAll") {
-            console.log("this is happeieng:")
-            blockAll();
-        } else if (message.command == "blockNone") {
-            blockNone();
+    function blockSubs() {
+
+        let ytSubsSection = document.querySelectorAll('ytd-guide-section-renderer');
+        ytSubsSection.forEach(sub => {
+            sub.style.visibility = "hidden";
+        })
+    }
+
+    function unBlockSubs() {
+
+        let ytSubsSection = document.querySelectorAll('ytd-guide-section-renderer');
+        ytSubsSection.forEach(sub => {
+            sub.style.visibility = "visible";
+        })
+    }
+
+    browser.runtime.onMessage.addListener((message, sender, sendRes) => {
+        console.log(message.button + message.isTrue)
+        if (message.button === "block-all") {
+            if (message.isTrue) {
+                blockAll()
+            } else {
+                unBlockAll()
+            }
         }
+        if (message.button === "block-subscriptions") {
+            if (message.isTrue) {
+                blockSubs()
+            } else {
+                unBlockSubs()
+            }
+        }
+
     })
 })()

@@ -3,6 +3,8 @@
   "name": "no-distractions",
   "description": "Turn off all distractions from your Youtube home page",
   "version": "0.0.1",
+  "permissions": ["tabs", "cookies", "<all_urls>"],
+
   "icons": {
     "64": "icons/icon.svg"
   },
