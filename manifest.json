@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "no-distractions",
+  "name": "no-distractions-YT",
   "description": "Turn off all distractions from your Youtube home page",
   "version": "0.0.1",
   "permissions": ["tabs", "cookies", "<all_urls>"],
